@@ -5,9 +5,9 @@ import { Users, Lightbulb, BookOpen, ChevronRight, Plus, Calendar, Mail, Github,
 // Animated background component
 const FloatingOrbs = () => (
   <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-    <div className="absolute w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-    <div className="absolute w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000 top-0 right-0"></div>
-    <div className="absolute w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000 bottom-20 left-20"></div>
+    <div className="absolute w-72 h-72 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+    <div className="absolute w-72 h-72 bg-violet-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000 top-0 right-0"></div>
+    <div className="absolute w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000 bottom-20 left-20"></div>
   </div>
 );
 
@@ -16,7 +16,7 @@ const FloatingOrbs = () => (
 const GradientButton = ({ onClick, children, className = '' }) => (
   <button
     onClick={onClick}
-    className={`bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out shadow-lg hover:shadow-cyan-500/50 btn-press ${className}`}
+    className={`bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-6 py-2 rounded-lg font-semibold transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out shadow-lg hover:shadow-purple-500/50 btn-press ${className}`}
   >
     {children}
   </button>
@@ -33,7 +33,7 @@ const GlassCard = ({ children, className = '' }) => (
 
 // A reusable main layout container
 const MainContainer = ({ children }) => (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 to-purple-900 text-slate-200 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-950 to-purple-950 text-slate-200 overflow-hidden">
       <FloatingOrbs />
       <div className="relative z-10">
         {children}
@@ -260,14 +260,14 @@ const GuelphIncubator = () => {
         <div className="max-w-7xl mx-auto px-4 py-20 text-center">
             {/* Demo Banner */}
             <div className="mb-8 animate-fade-in">
-              <span className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+              <span className="inline-flex items-center gap-2 bg-fuchsia-500/20 border border-fuchsia-400/30 text-fuchsia-300 px-4 py-2 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-fuchsia-400 rounded-full animate-pulse"></span>
                 Demo Version - Official release under academic revision
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
-                <span className="bg-gradient-to-r from-pink-500 to-cyan-400 bg-clip-text text-transparent animate-gradient">
+                <span className="bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent animate-gradient">
                     ClubConnect
                 </span>
             </h1>
@@ -286,33 +286,33 @@ const GuelphIncubator = () => {
             <div className="grid md:grid-cols-2 gap-8">
                 <GlassCard>
                   <div className="flex items-center mb-4">
-                    <BookOpen className="h-10 w-10 text-cyan-400 mr-4" />
+                    <BookOpen className="h-10 w-10 text-violet-400 mr-4" />
                     <h2 className="text-2xl font-bold text-white">Research Matchmaking</h2>
                   </div>
                   <p className="text-slate-300 mb-6">
                     Discover and connect with faculty for volunteer USRA positions, thesis projects, and research assistant opportunities.
                   </p>
                   <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-cyan-400" />Browse available research positions</li>
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-cyan-400" />Create detailed academic profiles</li>
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-cyan-400" />Simplified, direct faculty connections</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-violet-400" />Browse available research positions</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-violet-400" />Create detailed academic profiles</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-violet-400" />Simplified, direct faculty connections</li>
                   </ul>
                 </GlassCard>
 
 
                 <GlassCard>
                    <div className="flex items-center mb-4">
-                    <Users className="h-10 w-10 text-pink-500 mr-4" />
+                    <Users className="h-10 w-10 text-fuchsia-500 mr-4" />
                     <h2 className="text-2xl font-bold text-white">Startup Incubator</h2>
                   </div>
                   <p className="text-slate-300 mb-6">
                     Launch your venture. Find co-founders, join our semester-long incubator, and compete for cash prizes.
                   </p>
                   <ul className="space-y-3 text-slate-300">
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-pink-500" />Post and discover startup ideas on our public board</li>
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-pink-500" />Join competitive, milestone-driven cohorts</li>
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-pink-500" />Access microgrants to cover project costs</li>
-                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-pink-500" />Compete for an end-of-term prize pool</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-fuchsia-500" />Post and discover startup ideas on our public board</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-fuchsia-500" />Join competitive, milestone-driven cohorts</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-fuchsia-500" />Access microgrants to cover project costs</li>
+                    <li className="flex items-center"><ChevronRight className="h-5 w-5 mr-2 text-fuchsia-500" />Compete for an end-of-term prize pool</li>
                   </ul>
                 </GlassCard>
             </div>
@@ -335,19 +335,19 @@ const GuelphIncubator = () => {
           <div className="flex items-center gap-8">
             <div className="flex items-center cursor-pointer" onClick={() => setCurrentView('dashboard')}>
               <img src="/socis-logo.png" alt="SOCIS" className="h-10 w-auto mr-2" />
-              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">ClubConnect</span>
+              <span className="font-bold text-xl bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">ClubConnect</span>
             </div>
             <div className="hidden md:flex items-center gap-1">
-              <button onClick={() => setCurrentView('dashboard')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'dashboard' ? 'bg-cyan-500/20 text-cyan-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <button onClick={() => setCurrentView('dashboard')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'dashboard' ? 'bg-purple-500/20 text-purple-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
                 Dashboard
               </button>
-              <button onClick={() => setCurrentView('research')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'research' ? 'bg-cyan-500/20 text-cyan-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <button onClick={() => setCurrentView('research')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'research' ? 'bg-purple-500/20 text-purple-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
                 Research
               </button>
-              <button onClick={() => setCurrentView('startups')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'startups' ? 'bg-pink-500/20 text-pink-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <button onClick={() => setCurrentView('startups')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'startups' ? 'bg-fuchsia-500/20 text-fuchsia-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
                 Startups
               </button>
-              <button onClick={() => setCurrentView('mentors')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'mentors' ? 'bg-purple-500/20 text-purple-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <button onClick={() => setCurrentView('mentors')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${currentView === 'mentors' ? 'bg-violet-500/20 text-violet-400' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
                 Mentors
               </button>
             </div>
@@ -355,15 +355,15 @@ const GuelphIncubator = () => {
           <div className="flex items-center gap-3">
             <button onClick={() => setCurrentView('messages')} className="relative p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all">
               <MessageSquare className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">3</span>
+              <span className="absolute -top-1 -right-1 bg-fuchsia-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">3</span>
             </button>
             <button className="relative p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all">
               <Bell className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-cyan-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">5</span>
+              <span className="absolute -top-1 -right-1 bg-purple-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">5</span>
             </button>
             <div className="h-6 w-px bg-slate-700 mx-2"></div>
             <button onClick={() => setCurrentView('profile')} className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-all">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-fuchsia-500 flex items-center justify-center text-white font-bold text-sm">
                 {currentUser?.name?.charAt(0) || 'U'}
               </div>
               <span className="text-slate-300 text-sm hidden sm:block">{currentUser?.name}</span>
@@ -394,12 +394,12 @@ const GuelphIncubator = () => {
           <div className="max-w-7xl mx-auto px-4 py-6">
             {/* Welcome Banner */}
             {!userProfile && (
-              <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 rounded-xl p-4 mb-6 flex items-center justify-between">
+              <div className="bg-gradient-to-r from-fuchsia-500/20 to-fuchsia-500/20 border border-fuchsia-400/30 rounded-xl p-4 mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400" />
-                  <p className="text-yellow-200">Welcome! Complete your profile to unlock all features.</p>
+                  <Zap className="h-6 w-6 text-fuchsia-400" />
+                  <p className="text-fuchsia-200">Welcome! Complete your profile to unlock all features.</p>
                 </div>
-                <button onClick={() => setCurrentView('profile')} className="bg-yellow-500/30 hover:bg-yellow-500/50 text-yellow-200 px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                <button onClick={() => setCurrentView('profile')} className="bg-fuchsia-500/30 hover:bg-fuchsia-500/50 text-fuchsia-200 px-4 py-2 rounded-lg text-sm font-medium transition-all">
                   Create Profile
                 </button>
               </div>
@@ -407,34 +407,34 @@ const GuelphIncubator = () => {
 
             {/* Stats Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 stagger-children">
-              <button onClick={() => setCurrentView('project')} className="bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 backdrop-blur-lg border border-cyan-400/20 rounded-xl p-4 hover:border-cyan-400/40 transition-all text-left card-lift">
+              <button onClick={() => setCurrentView('project')} className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 backdrop-blur-lg border border-purple-400/20 rounded-xl p-4 hover:border-purple-400/40 transition-all text-left card-lift">
                 <div className="flex items-center justify-between mb-2">
-                  <Rocket className="h-5 w-5 text-cyan-400 animate-float" />
-                  <span className="text-xs text-cyan-400 font-medium">+2 this week</span>
+                  <Rocket className="h-5 w-5 text-purple-400 animate-float" />
+                  <span className="text-xs text-purple-400 font-medium">+2 this week</span>
                 </div>
                 <p className="text-2xl font-bold text-white">3</p>
                 <p className="text-sm text-slate-400">Active Projects</p>
               </button>
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 backdrop-blur-lg border border-purple-400/20 rounded-xl p-4 hover:border-purple-400/40 transition-all card-lift">
+              <div className="bg-gradient-to-br from-violet-500/20 to-violet-600/10 backdrop-blur-lg border border-violet-400/20 rounded-xl p-4 hover:border-violet-400/40 transition-all card-lift">
                 <div className="flex items-center justify-between mb-2">
-                  <FileText className="h-5 w-5 text-purple-400" />
-                  <span className="text-xs text-yellow-400 font-medium">2 pending</span>
+                  <FileText className="h-5 w-5 text-violet-400" />
+                  <span className="text-xs text-fuchsia-400 font-medium">2 pending</span>
                 </div>
                 <p className="text-2xl font-bold text-white">{userApplications.length || 5}</p>
                 <p className="text-sm text-slate-400">Applications</p>
               </div>
-              <div className="bg-gradient-to-br from-pink-500/20 to-pink-600/10 backdrop-blur-lg border border-pink-400/20 rounded-xl p-4 hover:border-pink-400/40 transition-all card-lift">
+              <div className="bg-gradient-to-br from-fuchsia-500/20 to-fuchsia-600/10 backdrop-blur-lg border border-fuchsia-400/20 rounded-xl p-4 hover:border-fuchsia-400/40 transition-all card-lift">
                 <div className="flex items-center justify-between mb-2">
-                  <Calendar className="h-5 w-5 text-pink-400" />
-                  <span className="text-xs text-pink-400 font-medium">Tomorrow</span>
+                  <Calendar className="h-5 w-5 text-fuchsia-400" />
+                  <span className="text-xs text-fuchsia-400 font-medium">Tomorrow</span>
                 </div>
                 <p className="text-2xl font-bold text-white">2</p>
                 <p className="text-sm text-slate-400">Upcoming Events</p>
               </div>
-              <button onClick={() => setCurrentView('messages')} className="bg-gradient-to-br from-green-500/20 to-green-600/10 backdrop-blur-lg border border-green-400/20 rounded-xl p-4 hover:border-green-400/40 transition-all card-lift text-left">
+              <button onClick={() => setCurrentView('messages')} className="bg-gradient-to-br from-fuchsia-500/20 to-fuchsia-600/10 backdrop-blur-lg border border-fuchsia-400/20 rounded-xl p-4 hover:border-fuchsia-400/40 transition-all card-lift text-left">
                 <div className="flex items-center justify-between mb-2">
-                  <MessageSquare className="h-5 w-5 text-green-400" />
-                  <span className="text-xs text-green-400 font-medium">3 new</span>
+                  <MessageSquare className="h-5 w-5 text-fuchsia-400" />
+                  <span className="text-xs text-fuchsia-400 font-medium">3 new</span>
                 </div>
                 <p className="text-2xl font-bold text-white">8</p>
                 <p className="text-sm text-slate-400">Messages</p>
@@ -445,23 +445,23 @@ const GuelphIncubator = () => {
             <div className="mb-8">
               <h2 className="text-lg font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <button onClick={() => setCurrentView('startups')} className="group bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-xl text-left hover:scale-105 transition-all shadow-lg hover:shadow-cyan-500/30">
+                <button onClick={() => setCurrentView('startups')} className="group bg-gradient-to-br from-purple-500 to-violet-600 p-4 rounded-xl text-left hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/30">
                   <Plus className="h-6 w-6 text-white mb-2 group-hover:rotate-90 transition-transform" />
                   <p className="font-semibold text-white">Create Project</p>
-                  <p className="text-xs text-cyan-100">Start something new</p>
+                  <p className="text-xs text-purple-100">Start something new</p>
                 </button>
-                <button onClick={() => setCurrentView('research')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-cyan-400/50 transition-all">
-                  <Search className="h-6 w-6 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
+                <button onClick={() => setCurrentView('research')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-purple-400/50 transition-all">
+                  <Search className="h-6 w-6 text-purple-400 mb-2 group-hover:scale-110 transition-transform" />
                   <p className="font-semibold text-white">Browse Opportunities</p>
                   <p className="text-xs text-slate-400">Find research positions</p>
                 </button>
-                <button onClick={() => setCurrentView('mentors')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-purple-400/50 transition-all">
-                  <GraduationCap className="h-6 w-6 text-purple-400 mb-2 group-hover:scale-110 transition-transform" />
+                <button onClick={() => setCurrentView('mentors')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-violet-400/50 transition-all">
+                  <GraduationCap className="h-6 w-6 text-violet-400 mb-2 group-hover:scale-110 transition-transform" />
                   <p className="font-semibold text-white">Find Mentors</p>
                   <p className="text-xs text-slate-400">Connect with experts</p>
                 </button>
-                <button onClick={() => setCurrentView('profile')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-pink-400/50 transition-all">
-                  <Users className="h-6 w-6 text-pink-400 mb-2 group-hover:scale-110 transition-transform" />
+                <button onClick={() => setCurrentView('profile')} className="group bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 p-4 rounded-xl text-left hover:border-fuchsia-400/50 transition-all">
+                  <Users className="h-6 w-6 text-fuchsia-400 mb-2 group-hover:scale-110 transition-transform" />
                   <p className="font-semibold text-white">Edit Profile</p>
                   <p className="text-xs text-slate-400">Update your info</p>
                 </button>
@@ -473,29 +473,29 @@ const GuelphIncubator = () => {
               {/* Left Column - Activity Feed */}
               <div className="lg:col-span-2 space-y-6">
                 {/* Incubator Promo */}
-                <div className="bg-gradient-to-br from-purple-600/30 to-pink-500/20 backdrop-blur-lg border border-purple-400/30 rounded-xl p-6">
+                <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-500/20 backdrop-blur-lg border border-violet-400/30 rounded-xl p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="font-bold text-xl text-white mb-1">Incubator Cohort - Fall 2025</h3>
-                      <p className="text-purple-200 text-sm">Applications now open!</p>
+                      <p className="text-violet-200 text-sm">Applications now open!</p>
                     </div>
-                    <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold">Open</span>
+                    <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs font-semibold">Open</span>
                   </div>
                   <div className="grid md:grid-cols-3 gap-4 mb-4">
                     <div className="bg-white/5 rounded-lg p-3 text-center">
-                      <p className="text-2xl font-bold text-yellow-400">$250</p>
+                      <p className="text-2xl font-bold text-fuchsia-400">$250</p>
                       <p className="text-xs text-slate-300">Microgrants</p>
                     </div>
                     <div className="bg-white/5 rounded-lg p-3 text-center">
-                      <p className="text-2xl font-bold text-cyan-400">$1,750</p>
+                      <p className="text-2xl font-bold text-violet-400">$1,750</p>
                       <p className="text-xs text-slate-300">Total Prizes</p>
                     </div>
                     <div className="bg-white/5 rounded-lg p-3 text-center">
-                      <p className="text-2xl font-bold text-pink-400">12</p>
+                      <p className="text-2xl font-bold text-fuchsia-400">12</p>
                       <p className="text-xs text-slate-300">Weeks</p>
                     </div>
                   </div>
-                  <button onClick={() => setCurrentView('startups')} className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2.5 rounded-lg font-semibold hover:opacity-90 transition-all">
+                  <button onClick={() => setCurrentView('startups')} className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white py-2.5 rounded-lg font-semibold hover:opacity-90 transition-all">
                     Apply Now
                   </button>
                 </div>
@@ -508,29 +508,29 @@ const GuelphIncubator = () => {
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 p-3 bg-slate-700/30 rounded-lg">
-                      <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                        <BookOpen className="h-4 w-4 text-cyan-400" />
+                      <div className="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="h-4 w-4 text-violet-400" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm text-white">New research position posted by <span className="text-cyan-400">Dr. Sarah Chen</span></p>
+                        <p className="text-sm text-white">New research position posted by <span className="text-violet-400">Dr. Sarah Chen</span></p>
                         <p className="text-xs text-slate-400 mt-1">Computer Vision for Agriculture - 2 hours ago</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-slate-700/30 rounded-lg">
-                      <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="h-4 w-4 text-green-400" />
+                      <div className="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-4 w-4 text-violet-400" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm text-white">Your application to <span className="text-green-400">ML Research</span> was accepted!</p>
+                        <p className="text-sm text-white">Your application to <span className="text-violet-400">ML Research</span> was accepted!</p>
                         <p className="text-xs text-slate-400 mt-1">5 hours ago</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-slate-700/30 rounded-lg">
-                      <div className="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0">
-                        <Heart className="h-4 w-4 text-pink-400" />
+                      <div className="w-8 h-8 rounded-full bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+                        <Heart className="h-4 w-4 text-fuchsia-400" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm text-white"><span className="text-pink-400">3 students</span> are interested in CampusConnect</p>
+                        <p className="text-sm text-white"><span className="text-fuchsia-400">3 students</span> are interested in CampusConnect</p>
                         <p className="text-xs text-slate-400 mt-1">Yesterday</p>
                       </div>
                     </div>
@@ -555,17 +555,17 @@ const GuelphIncubator = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-1 h-10 bg-yellow-500 rounded-full"></div>
+                      <div className="w-1 h-10 bg-fuchsia-500 rounded-full"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium text-white">Project Milestone</p>
-                        <p className="text-xs text-yellow-400">Dec 20, 11:59 PM</p>
+                        <p className="text-xs text-fuchsia-400">Dec 20, 11:59 PM</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-1 h-10 bg-cyan-500 rounded-full"></div>
+                      <div className="w-1 h-10 bg-violet-500 rounded-full"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium text-white">Incubator Check-in</p>
-                        <p className="text-xs text-cyan-400">Dec 22, 2:00 PM</p>
+                        <p className="text-xs text-violet-400">Dec 22, 2:00 PM</p>
                       </div>
                     </div>
                   </div>
@@ -575,7 +575,7 @@ const GuelphIncubator = () => {
                 <GlassCard className="p-5">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-semibold text-white">My Applications</h3>
-                    <span className="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">{userApplications.length || 3}</span>
+                    <span className="text-xs bg-violet-500/20 text-violet-400 px-2 py-1 rounded-full">{userApplications.length || 3}</span>
                   </div>
                   <div className="space-y-3">
                     {(userApplications.length > 0 ? userApplications.slice(0, 3) : [
@@ -586,14 +586,14 @@ const GuelphIncubator = () => {
                       <div key={app.id} className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
                         <div className="flex items-center gap-2">
                           {app.type === 'research' ?
-                            <BookOpen className="h-4 w-4 text-cyan-400" /> :
-                            <Rocket className="h-4 w-4 text-pink-400" />
+                            <BookOpen className="h-4 w-4 text-violet-400" /> :
+                            <Rocket className="h-4 w-4 text-fuchsia-400" />
                           }
                           <span className="text-sm text-slate-200 capitalize">{app.type}</span>
                         </div>
                         <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                          app.status === 'pending' ? 'bg-yellow-400/20 text-yellow-300' :
-                          app.status === 'accepted' ? 'bg-green-400/20 text-green-300' :
+                          app.status === 'pending' ? 'bg-fuchsia-400/20 text-fuchsia-300' :
+                          app.status === 'accepted' ? 'bg-violet-400/20 text-violet-300' :
                           'bg-gray-400/20 text-gray-300'
                         }`}>
                           {app.status}
@@ -607,27 +607,27 @@ const GuelphIncubator = () => {
                 <GlassCard className="p-5">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-semibold text-white">Recommended Mentors</h3>
-                    <button onClick={() => setCurrentView('mentors')} className="text-xs text-cyan-400 hover:text-cyan-300">View all</button>
+                    <button onClick={() => setCurrentView('mentors')} className="text-xs text-violet-400 hover:text-violet-300">View all</button>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 p-2 hover:bg-slate-700/30 rounded-lg transition-all cursor-pointer">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-white font-bold">SC</div>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-400 to-violet-500 flex items-center justify-center text-white font-bold">SC</div>
                       <div className="flex-1">
                         <p className="text-sm font-medium text-white">Dr. Sarah Chen</p>
                         <p className="text-xs text-slate-400">ML, Computer Vision</p>
                       </div>
-                      <div className="flex items-center text-yellow-400">
+                      <div className="flex items-center text-fuchsia-400">
                         <Star className="h-3 w-3 fill-current" />
                         <span className="text-xs ml-1">4.9</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 p-2 hover:bg-slate-700/30 rounded-lg transition-all cursor-pointer">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-orange-500 flex items-center justify-center text-white font-bold">JM</div>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-500 flex items-center justify-center text-white font-bold">JM</div>
                       <div className="flex-1">
                         <p className="text-sm font-medium text-white">Prof. James Miller</p>
                         <p className="text-xs text-slate-400">Startups, Product</p>
                       </div>
-                      <div className="flex items-center text-yellow-400">
+                      <div className="flex items-center text-fuchsia-400">
                         <Star className="h-3 w-3 fill-current" />
                         <span className="text-xs ml-1">4.8</span>
                       </div>
@@ -705,7 +705,7 @@ const GuelphIncubator = () => {
         reviews: 24,
         availability: 'Mon, Wed 2-4 PM',
         image: 'SC',
-        gradient: 'from-cyan-400 to-purple-500',
+        gradient: 'from-violet-400 to-violet-500',
         bio: 'Expert in deep learning and computer vision with 10+ years of research experience.',
         slots: [
           { day: 'Mon', time: '2:00 PM', available: true },
@@ -724,7 +724,7 @@ const GuelphIncubator = () => {
         reviews: 31,
         availability: 'Tue, Thu 10 AM - 12 PM',
         image: 'JM',
-        gradient: 'from-pink-400 to-orange-500',
+        gradient: 'from-fuchsia-400 to-fuchsia-500',
         bio: 'Founded 3 successful startups. Passionate about helping students launch ventures.',
         slots: [
           { day: 'Tue', time: '10:00 AM', available: true },
@@ -743,7 +743,7 @@ const GuelphIncubator = () => {
         reviews: 18,
         availability: 'Fri 1-5 PM',
         image: 'ER',
-        gradient: 'from-green-400 to-cyan-500',
+        gradient: 'from-violet-400 to-violet-500',
         bio: 'Hardware meets software. Specializes in IoT solutions and embedded programming.',
         slots: [
           { day: 'Fri', time: '1:00 PM', available: true },
@@ -762,7 +762,7 @@ const GuelphIncubator = () => {
         reviews: 42,
         availability: 'Sat 10 AM - 2 PM',
         image: 'AT',
-        gradient: 'from-purple-400 to-pink-500',
+        gradient: 'from-violet-400 to-fuchsia-500',
         bio: 'Senior SWE at Google. Loves mentoring the next generation of developers.',
         slots: [
           { day: 'Sat', time: '10:00 AM', available: false },
@@ -788,7 +788,7 @@ const GuelphIncubator = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent">
               Find a Mentor
             </h1>
             <p className="text-slate-400">Connect with experienced professionals and faculty to accelerate your growth</p>
@@ -803,7 +803,7 @@ const GuelphIncubator = () => {
                 placeholder="Search mentors by name or expertise..."
                 value={mentorSearchQuery}
                 onChange={(e) => setMentorSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-slate-200"
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -811,7 +811,7 @@ const GuelphIncubator = () => {
               <select
                 value={filterExpertise}
                 onChange={(e) => setFilterExpertise(e.target.value)}
-                className="px-4 py-3 bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-slate-200"
+                className="px-4 py-3 bg-slate-800/60 backdrop-blur-lg border border-slate-200/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
               >
                 <option value="all">All Expertise</option>
                 {allExpertise.map(exp => (
@@ -824,7 +824,7 @@ const GuelphIncubator = () => {
           {/* Mentors Grid */}
           <div className="grid md:grid-cols-2 gap-6">
             {filteredMentors.map(mentor => (
-              <GlassCard key={mentor.id} className="hover:border-purple-400/40 transition-all">
+              <GlassCard key={mentor.id} className="hover:border-violet-400/40 transition-all">
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${mentor.gradient} flex items-center justify-center text-white font-bold text-xl flex-shrink-0`}>
                     {mentor.image}
@@ -833,12 +833,12 @@ const GuelphIncubator = () => {
                     <div className="flex items-start justify-between">
                       <div>
                         <h3 className="text-lg font-semibold text-white">{mentor.name}</h3>
-                        <p className="text-sm text-purple-400">{mentor.title}</p>
+                        <p className="text-sm text-violet-400">{mentor.title}</p>
                         <p className="text-xs text-slate-400">{mentor.department}</p>
                       </div>
-                      <div className="flex items-center gap-1 bg-yellow-400/20 px-2 py-1 rounded-lg">
-                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-semibold text-yellow-400">{mentor.rating}</span>
+                      <div className="flex items-center gap-1 bg-fuchsia-400/20 px-2 py-1 rounded-lg">
+                        <Star className="h-4 w-4 text-fuchsia-400 fill-current" />
+                        <span className="text-sm font-semibold text-fuchsia-400">{mentor.rating}</span>
                         <span className="text-xs text-slate-400">({mentor.reviews})</span>
                       </div>
                     </div>
@@ -850,7 +850,7 @@ const GuelphIncubator = () => {
                 {/* Expertise Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {mentor.expertise.map((exp, idx) => (
-                    <span key={idx} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">
+                    <span key={idx} className="bg-violet-500/20 text-violet-300 px-3 py-1 rounded-full text-xs">
                       {exp}
                     </span>
                   ))}
@@ -858,8 +858,8 @@ const GuelphIncubator = () => {
 
                 {/* Office Hours */}
                 <div className="flex items-center gap-2 mb-4 text-sm">
-                  <Clock className="h-4 w-4 text-cyan-400" />
-                  <span className="text-slate-300">Office Hours: <span className="text-cyan-400">{mentor.availability}</span></span>
+                  <Clock className="h-4 w-4 text-violet-400" />
+                  <span className="text-slate-300">Office Hours: <span className="text-violet-400">{mentor.availability}</span></span>
                 </div>
 
                 {/* Available Slots Calendar */}
@@ -876,9 +876,9 @@ const GuelphIncubator = () => {
                         }}
                         className={`p-2 rounded-lg text-xs font-medium transition-all ${
                           slot.available
-                            ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30 cursor-pointer'
+                            ? 'bg-violet-500/20 text-violet-300 hover:bg-violet-500/30 cursor-pointer'
                             : 'bg-slate-600/30 text-slate-500 cursor-not-allowed'
-                        } ${selectedMentor?.id === mentor.id && selectedSlot === slot ? 'ring-2 ring-green-400' : ''}`}
+                        } ${selectedMentor?.id === mentor.id && selectedSlot === slot ? 'ring-2 ring-violet-400' : ''}`}
                       >
                         {slot.day} {slot.time}
                       </button>
@@ -890,7 +890,7 @@ const GuelphIncubator = () => {
                 <div className="flex gap-3">
                   <button
                     onClick={() => alert(`Booking session with ${mentor.name}!`)}
-                    className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2.5 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                    className="flex-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white py-2.5 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-2"
                   >
                     <Calendar className="h-4 w-4" />
                     Book Session
@@ -926,13 +926,13 @@ const GuelphIncubator = () => {
                   {selectedMentor.image}
                 </div>
                 <h3 className="text-2xl font-bold text-white">{selectedMentor.name}</h3>
-                <p className="text-purple-400">{selectedMentor.title}</p>
+                <p className="text-violet-400">{selectedMentor.title}</p>
               </div>
 
-              <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-4 mb-6">
+              <div className="bg-violet-500/20 border border-violet-400/30 rounded-lg p-4 mb-6">
                 <div className="flex items-center justify-center gap-3">
-                  <Calendar className="h-5 w-5 text-green-400" />
-                  <span className="text-green-300 font-semibold">{selectedSlot.day} at {selectedSlot.time}</span>
+                  <Calendar className="h-5 w-5 text-violet-400" />
+                  <span className="text-violet-300 font-semibold">{selectedSlot.day} at {selectedSlot.time}</span>
                 </div>
               </div>
 
@@ -942,13 +942,13 @@ const GuelphIncubator = () => {
                   <textarea
                     rows={3}
                     placeholder="Briefly describe your questions or topics..."
-                    className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-slate-200"
+                    className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
                   />
                 </div>
                 <div>
                   <label className="block text-slate-300 mb-2 font-semibold">Meeting Preference</label>
                   <div className="flex gap-3">
-                    <button className="flex-1 flex items-center justify-center gap-2 p-3 bg-purple-500/20 border border-purple-400/30 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all">
+                    <button className="flex-1 flex items-center justify-center gap-2 p-3 bg-violet-500/20 border border-violet-400/30 rounded-lg text-violet-300 hover:bg-violet-500/30 transition-all">
                       <Video className="h-4 w-4" /> Video Call
                     </button>
                     <button className="flex-1 flex items-center justify-center gap-2 p-3 bg-slate-700/50 border border-slate-600 rounded-lg text-slate-300 hover:bg-slate-700 transition-all">
@@ -965,7 +965,7 @@ const GuelphIncubator = () => {
                     setSelectedMentor(null);
                     setSelectedSlot(null);
                   }}
-                  className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
+                  className="flex-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
                 >
                   Confirm Booking
                 </button>
@@ -995,9 +995,9 @@ const GuelphIncubator = () => {
       cohort: 'Fall 2025 Incubator',
       progress: 65,
       team: [
-        { name: 'Alex Rivera', role: 'Founder & CEO', avatar: 'AR', gradient: 'from-pink-400 to-orange-500' },
-        { name: 'Jordan Lee', role: 'CTO', avatar: 'JL', gradient: 'from-cyan-400 to-blue-500' },
-        { name: 'Sam Patel', role: 'Designer', avatar: 'SP', gradient: 'from-purple-400 to-pink-500' },
+        { name: 'Alex Rivera', role: 'Founder & CEO', avatar: 'AR', gradient: 'from-fuchsia-400 to-fuchsia-500' },
+        { name: 'Jordan Lee', role: 'CTO', avatar: 'JL', gradient: 'from-violet-400 to-blue-500' },
+        { name: 'Sam Patel', role: 'Designer', avatar: 'SP', gradient: 'from-violet-400 to-fuchsia-500' },
       ],
       milestones: [
         { id: 1, title: 'Project Kickoff', date: 'Sep 5', status: 'completed', description: 'Initial team formation and idea validation' },
@@ -1040,26 +1040,26 @@ const GuelphIncubator = () => {
           </button>
 
           {/* Project Header */}
-          <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-lg border border-pink-400/30 rounded-xl p-6 mb-6">
+          <div className="bg-gradient-to-r from-fuchsia-500/20 to-violet-500/20 backdrop-blur-lg border border-fuchsia-400/30 rounded-xl p-6 mb-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <h1 className="text-3xl font-bold text-white">{project.name}</h1>
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    project.stage === 'idea' ? 'bg-yellow-400/20 text-yellow-300' :
+                    project.stage === 'idea' ? 'bg-fuchsia-400/20 text-fuchsia-300' :
                     project.stage === 'prototype' ? 'bg-blue-400/20 text-blue-300' :
-                    project.stage === 'mvp' ? 'bg-green-400/20 text-green-300' :
-                    'bg-purple-400/20 text-purple-300'
+                    project.stage === 'mvp' ? 'bg-violet-400/20 text-violet-300' :
+                    'bg-violet-400/20 text-violet-300'
                   }`}>{project.stage}</span>
                 </div>
-                <p className="text-lg text-pink-200">{project.tagline}</p>
+                <p className="text-lg text-fuchsia-200">{project.tagline}</p>
                 <div className="flex items-center gap-4 mt-3 text-sm text-slate-400">
                   <span className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
                     Started {project.startDate}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Award className="h-4 w-4 text-purple-400" />
+                    <Award className="h-4 w-4 text-violet-400" />
                     {project.cohort}
                   </span>
                 </div>
@@ -1069,7 +1069,7 @@ const GuelphIncubator = () => {
                   <Github className="h-4 w-4" />
                   Code
                 </button>
-                <button className="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg hover:opacity-90 transition-all flex items-center gap-2 text-white font-semibold">
+                <button className="px-4 py-2 bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-lg hover:opacity-90 transition-all flex items-center gap-2 text-white font-semibold">
                   <Rocket className="h-4 w-4" />
                   View Demo
                 </button>
@@ -1080,11 +1080,11 @@ const GuelphIncubator = () => {
             <div className="mt-6">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-slate-300">Overall Progress</span>
-                <span className="text-sm font-semibold text-pink-400">{project.progress}%</span>
+                <span className="text-sm font-semibold text-fuchsia-400">{project.progress}%</span>
               </div>
               <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all"
+                  className="h-full bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-full transition-all"
                   style={{ width: `${project.progress}%` }}
                 />
               </div>
@@ -1109,13 +1109,13 @@ const GuelphIncubator = () => {
                       {/* Timeline Line */}
                       <div className="flex flex-col items-center">
                         <div className={`w-4 h-4 rounded-full flex-shrink-0 ${
-                          milestone.status === 'completed' ? 'bg-green-500' :
-                          milestone.status === 'in_progress' ? 'bg-cyan-500 animate-pulse' :
+                          milestone.status === 'completed' ? 'bg-violet-500' :
+                          milestone.status === 'in_progress' ? 'bg-violet-500 animate-pulse' :
                           'bg-slate-600'
                         }`} />
                         {idx < project.milestones.length - 1 && (
                           <div className={`w-0.5 flex-1 mt-1 ${
-                            milestone.status === 'completed' ? 'bg-green-500/50' : 'bg-slate-700'
+                            milestone.status === 'completed' ? 'bg-violet-500/50' : 'bg-slate-700'
                           }`} />
                         )}
                       </div>
@@ -1127,7 +1127,7 @@ const GuelphIncubator = () => {
                         </div>
                         <p className="text-sm text-slate-400">{milestone.description}</p>
                         {milestone.status === 'in_progress' && (
-                          <span className="inline-block mt-2 px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">
+                          <span className="inline-block mt-2 px-2 py-1 bg-violet-500/20 text-violet-300 text-xs rounded-full">
                             In Progress
                           </span>
                         )}
@@ -1141,16 +1141,16 @@ const GuelphIncubator = () => {
               <GlassCard>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-lg font-semibold text-white">Tasks</h2>
-                  <button className="text-sm text-cyan-400 hover:text-cyan-300">+ Add Task</button>
+                  <button className="text-sm text-violet-400 hover:text-violet-300">+ Add Task</button>
                 </div>
                 <div className="space-y-3">
                   {project.tasks.map(task => (
                     <div key={task.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg">
                       <div className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                         task.status === 'completed'
-                          ? 'bg-green-500 border-green-500'
+                          ? 'bg-violet-500 border-violet-500'
                           : task.status === 'in_progress'
-                          ? 'border-cyan-500'
+                          ? 'border-violet-500'
                           : 'border-slate-500'
                       }`}>
                         {task.status === 'completed' && <CheckCircle className="h-3 w-3 text-white" />}
@@ -1163,7 +1163,7 @@ const GuelphIncubator = () => {
                       <span className="text-xs text-slate-400">{task.assignee}</span>
                       <span className={`px-2 py-0.5 rounded text-xs ${
                         task.priority === 'high' ? 'bg-red-500/20 text-red-300' :
-                        task.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-300' :
+                        task.priority === 'medium' ? 'bg-fuchsia-500/20 text-fuchsia-300' :
                         'bg-slate-500/20 text-slate-300'
                       }`}>{task.priority}</span>
                     </div>
@@ -1200,8 +1200,8 @@ const GuelphIncubator = () => {
                 <h2 className="text-lg font-semibold text-white mb-4">Recent Updates</h2>
                 <div className="space-y-4">
                   {project.updates.map((update, idx) => (
-                    <div key={idx} className="border-l-2 border-purple-500/50 pl-3">
-                      <p className="text-xs text-purple-400 mb-1">{update.date}</p>
+                    <div key={idx} className="border-l-2 border-violet-500/50 pl-3">
+                      <p className="text-xs text-violet-400 mb-1">{update.date}</p>
                       <p className="text-sm text-slate-300">{update.content}</p>
                     </div>
                   ))}
@@ -1240,7 +1240,7 @@ const GuelphIncubator = () => {
         id: 1,
         name: 'Dr. Sarah Chen',
         avatar: 'SC',
-        gradient: 'from-cyan-400 to-purple-500',
+        gradient: 'from-violet-400 to-violet-500',
         lastMessage: 'Looking forward to our session tomorrow!',
         time: '2m ago',
         unread: 2
@@ -1249,7 +1249,7 @@ const GuelphIncubator = () => {
         id: 2,
         name: 'Alex Rivera',
         avatar: 'AR',
-        gradient: 'from-pink-400 to-orange-500',
+        gradient: 'from-fuchsia-400 to-fuchsia-500',
         lastMessage: 'Thanks for your interest in CampusConnect!',
         time: '1h ago',
         unread: 1
@@ -1258,7 +1258,7 @@ const GuelphIncubator = () => {
         id: 3,
         name: 'Incubator Team',
         avatar: 'IT',
-        gradient: 'from-green-400 to-cyan-500',
+        gradient: 'from-violet-400 to-violet-500',
         lastMessage: 'Reminder: Weekly check-in tomorrow at 3 PM',
         time: '3h ago',
         unread: 0
@@ -1297,7 +1297,7 @@ const GuelphIncubator = () => {
                       key={convo.id}
                       onClick={() => setSelectedConvoId(convo.id)}
                       className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all text-left ${
-                        selectedConvo.id === convo.id ? 'bg-purple-500/20 border border-purple-400/30' : 'hover:bg-slate-700/50'
+                        selectedConvo.id === convo.id ? 'bg-violet-500/20 border border-violet-400/30' : 'hover:bg-slate-700/50'
                       }`}
                     >
                       <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${convo.gradient} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
@@ -1311,7 +1311,7 @@ const GuelphIncubator = () => {
                         <p className="text-sm text-slate-400 truncate">{convo.lastMessage}</p>
                       </div>
                       {convo.unread > 0 && (
-                        <span className="bg-pink-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                        <span className="bg-fuchsia-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                           {convo.unread}
                         </span>
                       )}
@@ -1331,7 +1331,7 @@ const GuelphIncubator = () => {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-white">{selectedConvo.name}</p>
-                    <p className="text-xs text-green-400">Online</p>
+                    <p className="text-xs text-violet-400">Online</p>
                   </div>
                   <button className="p-2 hover:bg-slate-700 rounded-lg transition-all">
                     <Video className="h-5 w-5 text-slate-400" />
@@ -1347,11 +1347,11 @@ const GuelphIncubator = () => {
                     <div key={msg.id} className={`flex ${msg.sender === 'me' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[70%] ${
                         msg.sender === 'me'
-                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+                          ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white'
                           : 'bg-slate-700/50 text-slate-200'
                       } rounded-2xl px-4 py-2`}>
                         <p className="text-sm">{msg.text}</p>
-                        <p className={`text-xs mt-1 ${msg.sender === 'me' ? 'text-purple-200' : 'text-slate-400'}`}>
+                        <p className={`text-xs mt-1 ${msg.sender === 'me' ? 'text-violet-200' : 'text-slate-400'}`}>
                           {msg.time}
                         </p>
                       </div>
@@ -1365,9 +1365,9 @@ const GuelphIncubator = () => {
                     <input
                       type="text"
                       placeholder="Type a message..."
-                      className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-slate-200"
+                      className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
                     />
-                    <button className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl hover:opacity-90 transition-all">
+                    <button className="p-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-xl hover:opacity-90 transition-all">
                       <Send className="h-5 w-5 text-white" />
                     </button>
                   </div>
@@ -1391,7 +1391,7 @@ const FormInput = ({ label, ...props }) => (
       <label className="block text-slate-300 mb-2 font-semibold">{label}</label>
       <input
         {...props}
-        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-slate-200"
+        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
       />
     </div>
   );
@@ -1401,7 +1401,7 @@ const FormInput = ({ label, ...props }) => (
       <label className="block text-slate-300 mb-2 font-semibold">{label}</label>
       <textarea
         {...props}
-        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-slate-200"
+        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
       />
     </div>
   );
@@ -1411,7 +1411,7 @@ const FormInput = ({ label, ...props }) => (
       <label className="block text-slate-300 mb-2 font-semibold">{label}</label>
       <select
         {...props}
-        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-slate-200"
+        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-slate-200"
       >
         {children}
       </select>
@@ -1425,7 +1425,7 @@ const LoginView = ({ onLogin, onBack }) => {
     const [userType, setUserType] = useState('student');
  
     return (
-      <div className="relative min-h-screen bg-gradient-to-br from-slate-900 to-purple-900 text-slate-200 flex items-center justify-center p-4">
+      <div className="relative min-h-screen bg-gradient-to-br from-slate-900 to-violet-900 text-slate-200 flex items-center justify-center p-4">
         <FloatingOrbs />
         <div className="relative z-10 w-full max-w-md">
             <GlassCard>
@@ -1436,8 +1436,8 @@ const LoginView = ({ onLogin, onBack }) => {
                 </div>
 
                 {/* Demo Notice */}
-                <div className="bg-cyan-500/20 border border-cyan-400/30 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-cyan-300 text-center">
+                <div className="bg-violet-500/20 border border-violet-400/30 rounded-lg p-3 mb-6">
+                  <p className="text-sm text-violet-300 text-center">
                     Demo Mode: Use the pre-filled credentials to explore
                   </p>
                 </div>
@@ -1517,17 +1517,17 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
 
     // Sample achievements
     const achievements = [
-      { id: 1, title: 'Early Adopter', description: 'Joined during beta launch', icon: '🚀', color: 'from-cyan-400 to-blue-500' },
-      { id: 2, title: 'Team Player', description: 'Joined 3+ projects', icon: '🤝', color: 'from-pink-400 to-purple-500' },
-      { id: 3, title: 'Mentor Connect', description: 'Booked 5 mentor sessions', icon: '🎓', color: 'from-yellow-400 to-orange-500' },
-      { id: 4, title: 'First Milestone', description: 'Completed first project milestone', icon: '✨', color: 'from-green-400 to-cyan-500' },
+      { id: 1, title: 'Early Adopter', description: 'Joined during beta launch', icon: '🚀', color: 'from-violet-400 to-blue-500' },
+      { id: 2, title: 'Team Player', description: 'Joined 3+ projects', icon: '🤝', color: 'from-fuchsia-400 to-violet-500' },
+      { id: 3, title: 'Mentor Connect', description: 'Booked 5 mentor sessions', icon: '🎓', color: 'from-fuchsia-400 to-fuchsia-500' },
+      { id: 4, title: 'First Milestone', description: 'Completed first project milestone', icon: '✨', color: 'from-violet-400 to-violet-500' },
     ];
 
     // Sample portfolio projects
     const portfolioProjects = [
-      { id: 1, name: 'Weather Dashboard', description: 'Real-time weather app with React', tech: ['React', 'API', 'CSS'], gradient: 'from-cyan-500 to-blue-500' },
-      { id: 2, name: 'ML Stock Predictor', description: 'Stock price prediction using LSTM', tech: ['Python', 'TensorFlow', 'Pandas'], gradient: 'from-purple-500 to-pink-500' },
-      { id: 3, name: 'Campus Events App', description: 'Event discovery for students', tech: ['React Native', 'Firebase'], gradient: 'from-pink-500 to-orange-500' },
+      { id: 1, name: 'Weather Dashboard', description: 'Real-time weather app with React', tech: ['React', 'API', 'CSS'], gradient: 'from-violet-500 to-blue-500' },
+      { id: 2, name: 'ML Stock Predictor', description: 'Stock price prediction using LSTM', tech: ['Python', 'TensorFlow', 'Pandas'], gradient: 'from-violet-500 to-fuchsia-500' },
+      { id: 3, name: 'Campus Events App', description: 'Event discovery for students', tech: ['React Native', 'Firebase'], gradient: 'from-fuchsia-500 to-fuchsia-500' },
     ];
 
     // Stats
@@ -1576,7 +1576,7 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
     };
 
     return (
-      <div className="relative min-h-screen bg-gradient-to-br from-slate-900 to-purple-900 text-slate-200">
+      <div className="relative min-h-screen bg-gradient-to-br from-slate-900 to-violet-900 text-slate-200">
         <FloatingOrbs />
         <nav className="bg-transparent pt-8 mb-8">
           <div className="max-w-7xl mx-auto px-4 py-4">
@@ -1593,14 +1593,14 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
           {userProfile ? (
             <>
               {/* Profile Header */}
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-lg border border-purple-400/30 rounded-xl p-8 mb-6">
+              <div className="bg-gradient-to-r from-violet-500/20 to-violet-500/20 backdrop-blur-lg border border-violet-400/30 rounded-xl p-8 mb-6">
                 <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-white text-3xl font-bold shadow-lg shadow-purple-500/30">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-violet-400 to-violet-500 flex items-center justify-center text-white text-3xl font-bold shadow-lg shadow-violet-500/30">
                     {userProfile.name?.charAt(0) || 'U'}
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h1 className="text-3xl font-bold text-white mb-1">{userProfile.name}</h1>
-                    <p className="text-cyan-400 mb-2">{userProfile.email}</p>
+                    <p className="text-violet-400 mb-2">{userProfile.email}</p>
                     {userProfile.type === 'student' && (
                       <p className="text-slate-400">{userProfile.year} • {userProfile.program}</p>
                     )}
@@ -1642,7 +1642,7 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
                       <h2 className="text-lg font-semibold text-white mb-4">Skills</h2>
                       <div className="flex flex-wrap gap-2">
                         {userProfile.skills.map((skill, idx) => (
-                          <span key={idx} className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-400/30 text-pink-200 px-4 py-2 rounded-lg text-sm font-medium">
+                          <span key={idx} className="bg-gradient-to-r from-fuchsia-500/20 to-violet-500/20 border border-fuchsia-400/30 text-fuchsia-200 px-4 py-2 rounded-lg text-sm font-medium">
                             {skill}
                           </span>
                         ))}
@@ -1656,14 +1656,14 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
                       <h2 className="text-lg font-semibold text-white mb-4">Research Areas</h2>
                       <div className="flex flex-wrap gap-2">
                         {userProfile.researchAreas.map((area, idx) => (
-                          <span key={idx} className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-200 px-4 py-2 rounded-lg text-sm font-medium">
+                          <span key={idx} className="bg-gradient-to-r from-violet-500/20 to-blue-500/20 border border-violet-400/30 text-violet-200 px-4 py-2 rounded-lg text-sm font-medium">
                             {area}
                           </span>
                         ))}
                       </div>
                       <div className="mt-4 pt-4 border-t border-slate-200/10">
                         <p className="text-sm text-slate-400">
-                          <span className={userProfile.supervisionAvailable ? 'text-green-400' : 'text-red-400'}>
+                          <span className={userProfile.supervisionAvailable ? 'text-violet-400' : 'text-red-400'}>
                             {userProfile.supervisionAvailable ? '✓ Available' : '✗ Not available'}
                           </span>
                           {' '}for supervision
@@ -1676,7 +1676,7 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
                   <GlassCard>
                     <div className="flex items-center justify-between mb-4">
                       <h2 className="text-lg font-semibold text-white">Portfolio</h2>
-                      <button className="text-sm text-cyan-400 hover:text-cyan-300">+ Add Project</button>
+                      <button className="text-sm text-violet-400 hover:text-violet-300">+ Add Project</button>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       {portfolioProjects.map(project => (
@@ -1724,21 +1724,21 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
                     <h2 className="text-lg font-semibold text-white mb-4">Recent Activity</h2>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 mt-2 rounded-full bg-green-500" />
+                        <div className="w-2 h-2 mt-2 rounded-full bg-violet-500" />
                         <div>
                           <p className="text-sm text-slate-300">Joined CampusConnect project</p>
                           <p className="text-xs text-slate-500">2 days ago</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 mt-2 rounded-full bg-cyan-500" />
+                        <div className="w-2 h-2 mt-2 rounded-full bg-violet-500" />
                         <div>
                           <p className="text-sm text-slate-300">Booked session with Dr. Chen</p>
                           <p className="text-xs text-slate-500">5 days ago</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 mt-2 rounded-full bg-purple-500" />
+                        <div className="w-2 h-2 mt-2 rounded-full bg-violet-500" />
                         <div>
                           <p className="text-sm text-slate-300">Applied to CV Research</p>
                           <p className="text-xs text-slate-500">1 week ago</p>
@@ -1751,7 +1751,7 @@ const ProfileView = ({ currentUser, userProfile, onBack, onCreateProfile }) => {
             </>
           ) : (
             <>
-              <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-500 to-cyan-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-fuchsia-500 to-violet-400 bg-clip-text text-transparent">
                 Create Your Profile
               </h2>
               <GlassCard>
@@ -1884,7 +1884,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
         </nav>
  
         <div className="max-w-5xl mx-auto px-4 pb-12">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Research Opportunities</h2>
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-violet-400 to-blue-500 bg-clip-text text-transparent">Research Opportunities</h2>
  
           {showForm && currentUser?.type === 'faculty' && (
             <Modal onBackdropClick={() => onToggleForm(false)}>
@@ -1936,7 +1936,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
               <GlassCard key={post.id}>
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-white">{post.title}</h3>
-                  <span className="bg-cyan-400/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-semibold">{post.type}</span>
+                  <span className="bg-violet-400/20 text-violet-300 px-3 py-1 rounded-full text-sm font-semibold">{post.type}</span>
                 </div>
                 <p className="text-slate-300 mb-4">{post.description}</p>
                 <div className="flex flex-wrap items-center text-sm text-slate-400 mb-4 gap-x-4 gap-y-2">
@@ -1993,7 +1993,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                     ← Back to Dashboard
                 </button>
                 {currentUser?.type === 'student' && (
-                    <GradientButton onClick={() => onToggleForm(true)} className="from-pink-500 to-purple-600 hover:shadow-pink-500/50">
+                    <GradientButton onClick={() => onToggleForm(true)} className="from-fuchsia-500 to-violet-600 hover:shadow-fuchsia-500/50">
                         <Plus className="h-4 w-4 mr-2" /> Post Idea
                     </GradientButton>
                 )}
@@ -2002,7 +2002,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
             </nav>
     
             <div className="max-w-5xl mx-auto px-4 pb-12">
-            <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">Startup Ideas</h2>
+            <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-fuchsia-500 to-fuchsia-400 bg-clip-text text-transparent">Startup Ideas</h2>
     
             {showForm && currentUser?.type === 'student' && (
                 <Modal onBackdropClick={() => onToggleForm(false)}>
@@ -2020,7 +2020,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                         <FormTextArea label="What are you looking for?" rows={2} placeholder="Co-founders, advisors..." value={formData.lookingFor} onChange={(e) => setFormData({...formData, lookingFor: e.target.value})} />
                         <FormInput label="Contact (Discord/IG/etc)" placeholder="@yourusername" value={formData.contact} onChange={(e) => setFormData({...formData, contact: e.target.value})} />
                         <div className="flex space-x-4 pt-4">
-                            <GradientButton onClick={handleSubmit} className="from-pink-500 to-purple-600 hover:shadow-pink-500/50">Post Idea</GradientButton>
+                            <GradientButton onClick={handleSubmit} className="from-fuchsia-500 to-violet-600 hover:shadow-fuchsia-500/50">Post Idea</GradientButton>
                             <button onClick={() => onToggleForm(false)} className="text-slate-400 hover:text-white transition-colors">Cancel</button>
                         </div>
                     </div>
@@ -2037,11 +2037,11 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                         <FormTextArea label="Milestones for This Semester" rows={3} placeholder="1. Complete MVP by Oct...\n2. Onboard 50 users by Nov..." value={incubatorData.milestones} onChange={(e) => setIncubatorData({...incubatorData, milestones: e.target.value})} />
                         <FormInput label="Pitch Deck Link (optional)" placeholder="drive.google.com/..." value={incubatorData.pitchDeck} onChange={(e) => setIncubatorData({...incubatorData, pitchDeck: e.target.value})} />
                         <FormInput label="Weekly Time Commitment" placeholder="e.g., 20 hours/week" value={incubatorData.commitment} onChange={(e) => setIncubatorData({...incubatorData, commitment: e.target.value})} />
-                        <div className="bg-purple-500/20 rounded-lg p-4 my-4">
-                            <p className="text-sm text-purple-300"><strong>Commitment:</strong> Teams must attend weekly check-ins and present at the final showcase. Reaching pre-determined milestones makes you eligible for microgrants and the final prize pool.</p>
+                        <div className="bg-violet-500/20 rounded-lg p-4 my-4">
+                            <p className="text-sm text-violet-300"><strong>Commitment:</strong> Teams must attend weekly check-ins and present at the final showcase. Reaching pre-determined milestones makes you eligible for microgrants and the final prize pool.</p>
                         </div>
                         <div className="flex space-x-4 pt-4">
-                            <GradientButton onClick={() => handleIncubatorSubmit(showIncubatorForm)} className="from-pink-500 to-purple-600 hover:shadow-pink-500/50"><Target className="h-4 w-4 mr-2"/>Submit Application</GradientButton>
+                            <GradientButton onClick={() => handleIncubatorSubmit(showIncubatorForm)} className="from-fuchsia-500 to-violet-600 hover:shadow-fuchsia-500/50"><Target className="h-4 w-4 mr-2"/>Submit Application</GradientButton>
                             <button onClick={() => onToggleIncubatorForm(null)} className="text-slate-400 hover:text-white transition-colors">Cancel</button>
                         </div>
                     </div>
@@ -2054,7 +2054,7 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                     <h3 className="text-lg font-semibold mb-4 text-white">Express Interest</h3>
                     <FormTextArea label="Message (optional)" rows={3} placeholder="Tell them why you're interested..." value={interestMessage} onChange={(e) => setInterestMessage(e.target.value)} />
                     <div className="flex space-x-4 pt-4">
-                        <GradientButton onClick={() => handleInterestSubmit(showInterestForm)} className="from-pink-500 to-purple-600 hover:shadow-pink-500/50">Send Interest</GradientButton>
+                        <GradientButton onClick={() => handleInterestSubmit(showInterestForm)} className="from-fuchsia-500 to-violet-600 hover:shadow-fuchsia-500/50">Send Interest</GradientButton>
                         <button onClick={() => {setShowInterestForm(null); setInterestMessage('');}} className="text-slate-400 hover:text-white transition-colors">Cancel</button>
                     </div>
                 </Modal>
@@ -2067,12 +2067,12 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                     <h3 className="text-xl font-semibold text-white">{post.title}</h3>
                     <div className="flex items-center space-x-3">
                         <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            post.stage === 'idea' ? 'bg-yellow-400/20 text-yellow-300' :
+                            post.stage === 'idea' ? 'bg-fuchsia-400/20 text-fuchsia-300' :
                             post.stage === 'prototype' ? 'bg-blue-400/20 text-blue-300' :
-                            post.stage === 'mvp' ? 'bg-green-400/20 text-green-300' :
-                            'bg-purple-400/20 text-purple-300'
+                            post.stage === 'mvp' ? 'bg-violet-400/20 text-violet-300' :
+                            'bg-violet-400/20 text-violet-300'
                         }`}>{post.stage}</span>
-                        <div className="flex items-center text-sm text-yellow-400"><Star className="h-4 w-4 mr-1" /><span>{post.interested} interested</span></div>
+                        <div className="flex items-center text-sm text-fuchsia-400"><Star className="h-4 w-4 mr-1" /><span>{post.interested} interested</span></div>
                     </div>
                     </div>
                     <p className="text-slate-300 mb-4">{post.pitch}</p>
@@ -2084,12 +2084,12 @@ const ResearchView = ({ currentUser, researchPosts, showForm, onToggleForm, onPo
                     <div className="flex flex-wrap gap-2 mb-6">
                     <span className="text-sm text-slate-200 font-medium self-center">Looking for:</span>
                     {post.skillsNeeded.map((skill, idx) => (
-                        <span key={idx} className="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-xs">{skill}</span>
+                        <span key={idx} className="bg-fuchsia-500/20 text-fuchsia-300 px-3 py-1 rounded-full text-xs">{skill}</span>
                     ))}
                     </div>
                     <div className="flex flex-wrap gap-3">
-                        <GradientButton onClick={() => setShowInterestForm(post.id)} className="from-pink-500 to-orange-500 hover:shadow-pink-500/50">I'm Interested</GradientButton>
-                        <GradientButton onClick={() => onToggleIncubatorForm(post.id)} className="from-purple-500 to-indigo-600 hover:shadow-purple-500/50">Apply to Incubator</GradientButton>
+                        <GradientButton onClick={() => setShowInterestForm(post.id)} className="from-fuchsia-500 to-fuchsia-500 hover:shadow-fuchsia-500/50">I'm Interested</GradientButton>
+                        <GradientButton onClick={() => onToggleIncubatorForm(post.id)} className="from-violet-500 to-purple-600 hover:shadow-violet-500/50">Apply to Incubator</GradientButton>
                     </div>
                 </GlassCard>
                 ))}
